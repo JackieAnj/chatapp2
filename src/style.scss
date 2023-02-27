@@ -1,3 +1,8 @@
+$primary-color: aquamarine;
+$secondary-color: lightseagreen;
+$dark-color: darkcyan;
+$light-color: rgb(192, 255, 234);
+
 @mixin mobile {
   @media screen and (max-width: 480px) {
     @content;
@@ -15,7 +20,7 @@
 }
 
 .formContainer {
-  background-color: #a7bcff;
+  background-color: $light-color;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -51,14 +56,14 @@
         padding: 15px;
         border: none;
         width: 250px;
-        border-bottom: 1px solid #a7bcff;
+        border-bottom: 1px solid $light-color;
         &::placeholder {
           color: rgb(175, 175, 175);
         }
       }
 
       button {
-        background-color: #7b96ec;
+        background-color: $secondary-color;
         color: white;
         padding: 10px;
         font-weight: bold;
@@ -70,7 +75,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: #8da4f1;
+        color: white;
         font-size: 12px;
         cursor: pointer;
 
@@ -88,17 +93,15 @@
 }
 
 .home {
-  background-color: #a7bcff;
+  background-color: $light-color;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .container {
-    border: 1px solid white;
-    border-radius: 10px;
-    width: 65%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     display: flex;
     overflow: hidden;
     @include tablet {
@@ -107,17 +110,17 @@
 
     .sidebar {
       flex: 1;
-      background-color: #3e3c61;
+      background-color: $secondary-color;
       position: relative;
 
       .navbar {
         display: flex;
         align-items: center;
-        background-color: #2f2d52;
+        background-color: $dark-color;
         height: 50px;
         padding: 10px;
         justify-content: space-between;
-        color: #ddddf7;
+        color: $light-color;
 
         .logo {
           font-weight: bold;
@@ -139,8 +142,8 @@
           }
 
           button {
-            background-color: #5d5b8d;
-            color: #ddddf7;
+            background-color: $secondary-color;
+            color: white;
             font-size: 10px;
             border: none;
             cursor: pointer;
@@ -206,7 +209,7 @@
 
       .chatInfo {
         height: 50px;
-        background-color: #5d5b8d;
+        background-color: $secondary-color;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -225,10 +228,10 @@
       }
 
       .messages {
-        background-color: #ddddf7;
+        background-color: $light-color;
         padding: 10px;
         height: calc(100% - 160px);
-        overflow: scroll;
+        overflow-y: auto;
 
         .message {
           display: flex;
@@ -315,7 +318,7 @@
             border: none;
             padding: 10px 15px;
             color: white;
-            background-color: #8da4f1;
+            background-color: $secondary-color;
             cursor: pointer;
           }
         }
