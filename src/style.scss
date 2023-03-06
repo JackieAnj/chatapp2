@@ -275,7 +275,7 @@ $light-color: rgb(192, 255, 234);
             .messageContent {
               align-items: flex-end;
               p {
-                background-color: #8da4f1;
+                background-color: $primary-color;
                 color: white;
                 border-radius: 10px 0px 10px 10px;
               }
