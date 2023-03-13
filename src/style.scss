@@ -1,7 +1,7 @@
-$primary-color: aquamarine;
+$primary-color: rgb(26, 87, 82);
 $secondary-color: lightseagreen;
 $dark-color: darkcyan;
-$light-color: rgb(192, 255, 234);
+$light-color: rgb(218, 255, 243);
 
 @mixin mobile {
   @media screen and (max-width: 480px) {
@@ -212,9 +212,10 @@ $light-color: rgb(192, 255, 234);
         background-color: $secondary-color;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 10px;
-        color: lightgray;
+        color: white;
+        font-size: large;
       }
 
       .chatIcons {
